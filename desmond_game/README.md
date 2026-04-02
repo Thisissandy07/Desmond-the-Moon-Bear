@@ -12,7 +12,7 @@ desmond_game/
 ├── static/
 │   ├── css/style.css
 │   ├── js/game.js
-│   └── images/             # ← Put all your game assets here
+│   └── images/             
 │       ├── BACKGROUND.png
 │       ├── desmond_idle.png
 │       ├── rock1.png
