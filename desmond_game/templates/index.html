@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desmond the Moon Bear</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<header>
+    <div class="pip"></div>
+    <h1>DESMOND <span>THE MOON BEAR</span></h1>
+</header>
+
+<main>
+    <!-- ── Game canvas ── -->
+    <div class="canvas-wrap">
+        <canvas id="game-canvas"></canvas>
+
+        <!-- Menu screen -->
+        <div class="overlay" id="menu-screen">
+            <h2>DESMOND<br><span>THE MOON BEAR</span></h2>
+            <p>Enter your name to begin</p>
+            <input type="text" id="player-name" placeholder="Your name..." maxlength="20" autocomplete="off">
+            <button class="btn btn-primary" id="start-btn">START GAME</button>
+        </div>
+
+        <!-- Death screen -->
+        <div class="overlay" id="death-screen" style="display:none;">
+            <h2>GAME OVER</h2>
+            <div class="score-display" id="final-score">0</div>
+            <p>Submit your score to the leaderboard?</p>
+            <div class="btn-row">
+                <button class="btn btn-primary" id="submit-btn">SUBMIT SCORE</button>
+                <button class="btn btn-secondary" id="restart-btn">PLAY AGAIN</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ── Sidebar ── -->
+    <aside class="sidebar">
+        <div class="panel">
+            <h3>Controls</h3>
+            <ul class="controls">
+                <li><kbd>SPACE</kbd> Jump</li>
+                <li><kbd>↓</kbd> Cancel jump</li>
+            </ul>
+        </div>
+
+        <div class="panel">
+            <h3>How to Play</h3>
+            <p style="font-size:14px;line-height:1.7;color:rgba(232,213,183,0.7);font-weight:600;">
+                Desmond is running across the moon! Dodge rocks and spaceships to survive.
+                The longer you last, the faster it gets. Good luck, bear.
+            </p>
+        </div>
+
+        <div class="panel">
+            <h3>Leaderboard</h3>
+            <table class="lb-table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Score</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody id="lb-body">
+                    <tr><td colspan="4" style="color:rgba(232,213,183,0.35);font-size:13px;padding:12px 6px;">No scores yet.</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </aside>
+</main>
+
+<!-- Mobile jump button -->
+<button class="btn btn-primary" id="jump-btn">⬆ JUMP</button>
+
+<script src="/static/js/game.js"></script>
+</body>
+</html>
